@@ -39,7 +39,7 @@ const getInfos = async() =>{
         query: `${state && state}`
       }
       //https://api.positionstack.com/v1/forward
-     await axios.get(`/api`, {params})
+     await axios.get(`/api/`, {params})
       .then(response => {
         console.log(response)
         const infos = Object.values(response.data)
