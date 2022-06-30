@@ -38,7 +38,7 @@ const getInfos = async() =>{
         access_key: `${process.env.REACT_APP_GEO && process.env.REACT_APP_GEO}`,
         query: `${state && state}`
       }
-     await axios.get('http://api.positionstack.com/v1/forward', {params})
+     await axios.get('api.positionstack.com/v1/forward', {params})
       .then(response => {
         const infos = Object.values(response.data)
         //console.log('infos',infos[0][0])
