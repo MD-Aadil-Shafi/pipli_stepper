@@ -38,8 +38,8 @@ const getInfos = async() =>{
         access_key: `${process.env.REACT_APP_GEO && process.env.REACT_APP_GEO}`,
         query: `${state && state}`
       }
-      //https://api.positionstack.com/v1/forward
-     await axios.get(`/api/`, {params})
+      //It's not working on deployed version. For thay I need to pay for HTTPS encryption.
+     await axios.get('http://api.positionstack.com/v1/forward', {params})
       .then(response => {
         console.log(response)
         const infos = Object.values(response.data)
@@ -67,8 +67,10 @@ getStates()
 
 //main function
     const checkField = async()=>{
-        if(!country || !state || !pin || !latitude || !longitude){
+        if(!country || !state){
             return setErrors('Please select proper Country and State')
+        }else if(!pin || !latitude || !longitude){
+            return setErrors('Location Api Error. OR not Licensed to used HTTPS encryption to their service.')
         }else{
             setErrors("")
             setStep(4)
