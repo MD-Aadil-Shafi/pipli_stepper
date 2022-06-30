@@ -11,7 +11,7 @@ const CompFour = ({setStep,state,setState,country,setCountry,pin,setPin,latitude
 //for getting country data
     const getCountries = async()=>{
         try{
-            let res = await axios.get('http://test.paplilabs.com/login_api/country/?limit=230');
+            let res = await axios.get('https://test.paplilabs.com/login_api/country/?limit=230');
             console.log(res)
             if(res.status === 200){
                 setCountryData(res.data.results)
