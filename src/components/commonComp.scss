@@ -1,0 +1,86 @@
+.comp-div{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    min-height: 400px;
+
+    .select-code{
+        border: none;
+        border-bottom: 2px solid #000;
+    }
+    .num-inp{
+        border: none;
+        border-bottom: 2px solid #000; 
+        width: 70%;
+    }
+    .txt-inp{
+        border: none;
+        border-bottom: 2px solid #000; 
+        width: 88%;
+    }
+    .txt-inp-full{
+        border: none;
+        border-bottom: 2px solid #000; 
+        width: 100%;
+    }
+    .side-btn{
+        width: 12%;
+        cursor: pointer;
+    }
+    .num-inp:focus{
+        outline: none;
+    }
+    .txt-inp:focus{
+        outline: none;
+    }
+    .txt-inp-full:focus{
+        outline: none;
+    }
+    .check-box{
+        zoom: 1.5;
+    }
+    .full-list{
+        height: 100px !important;
+    }
+
+    @media (max-width:430px){
+        .txt-inp{
+            width: 76%;
+        }
+        .side-btn{
+            width: 18%;
+        }
+    }
+    
+}
+
+@media (max-width:1030px){
+    .comp-div{
+        width: 60%;
+    }
+    .continue-btn{
+        width: 60%;
+    }
+    
+}
+
+@media (max-width:680px){
+    .comp-div{
+        width: 80%;
+    }
+    .continue-btn{
+        width: 80%;
+    }
+    
+}
+
+@media (max-width:520px){
+    .comp-div{
+        width: 96%;
+    }
+    .continue-btn{
+        width: 96%;
+    }
+    
+}

@@ -1,0 +1,25 @@
+.stepper-div{
+ width: 50%;
+
+}
+
+.continue-btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+    background-color: #EFD97B;
+}
+
+.back-arrow{
+    cursor: pointer;
+}
+
+@media(max-width:'540px'){
+    .title-flex{
+        flex-direction: column;
+    }
+    .stepper-div{
+        width: 100%;
+    }
+}
